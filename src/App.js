@@ -12,10 +12,13 @@ import Reviews from './pages/Home/Reviews/Reviews';
 import Login from './pages/Login/Login/Login';
 import Footer from './pages/Shared/Footer/Footer';
 import Explores from './pages/Explore/Explores/Explores';
+import Register from './pages/Login/Register/Register';
+// import { AuthProvider } from './contexts/AuthProvider/AuthProvider';
 
 function App() {
   return (
     <div className="App">
+  {/* <AuthProvider> */}
      <Router>
        <Header></Header>
       <Switch>
@@ -43,10 +46,13 @@ function App() {
          <Login></Login>
         </Route>
 
-
+        <Route path="/register">
+          <Register></Register>
+        </Route>
       </Switch>
       <Footer></Footer>
      </Router>
+    {/* </AuthProvider> */}
     </div>
   );
 }
