@@ -4,12 +4,13 @@ import { Grid } from '@mui/material';
 
 import { NavLink, useHistory } from 'react-router-dom';
 // import useAuth from './../../../hooks/useAuth';
-import useFirebase from '../../../hooks/useFirebase';
+
+import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
     const [loginData, setLoginData] = useState({});
     const history = useHistory();
-    const { user, registerUser, isLoading, authError } = useFirebase();
+    const { user, registerUser, isLoading, authError } = useAuth();
 
     const handleOnBlur = e => {
         const field = e.target.name;

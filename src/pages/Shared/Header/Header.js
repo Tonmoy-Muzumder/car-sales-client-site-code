@@ -4,11 +4,12 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import Box from '@mui/material/Box';
 import { NavLink } from 'react-router-dom';
 import Button from '@mui/material/Button';
-import useFirebase from '../../../hooks/useFirebase';
+// import useFirebase from '../../../hooks/useFirebase';
+import useAuth from '../../../hooks/useAuth';
 
 
 const Header = () => {
- const {user, logout} = useFirebase()
+ const {user, logout} = useAuth()
 
 
     return (
@@ -23,21 +24,23 @@ const Header = () => {
       <Nav.Link as={HashLink} to="/home#products">PRODUCTS+</Nav.Link>
       <Nav.Link as={HashLink} to="/home#reviews">REVIEWS+</Nav.Link>
       <Nav.Link as={HashLink} to="/explore">EXPLORE+</Nav.Link>
+
+      {
+        user?.email ?
+          <Box>
+            <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/dashboard">
+               <Button color="inherit">Dashboard</Button>
+            </NavLink>
+                <Button style={{ textDecoration: 'none', color: 'white' }} onClick={logout} color="inherit">Logout</Button>
+              </Box>
+               :
+            <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/login">
+                <Button color="inherit">Login</Button>
+            </NavLink>
+      }
      
     </Nav>
-    {
-                        user?.email ?
-                            <Box>
-                                <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/dashboard">
-                                    <Button color="inherit">Dashboard</Button>
-                                </NavLink>
-                                <Button style={{ textDecoration: 'none', color: 'white' }} onClick={logout} color="inherit">Logout</Button>
-                            </Box>
-                            :
-                            <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/login">
-                                <Button color="inherit">Login</Button>
-                            </NavLink>
-                    }
+    
   </Navbar.Collapse>
   </Container>
 </Navbar>

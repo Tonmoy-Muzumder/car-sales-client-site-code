@@ -12,13 +12,14 @@ import Reviews from './pages/Home/Reviews/Reviews';
 import Login from './pages/Login/Login/Login';
 import Footer from './pages/Shared/Footer/Footer';
 import Explores from './pages/Explore/Explores/Explores';
+import Dashboard from './pages/Dashboard/Dashboard/Dashboard'
 import Register from './pages/Login/Register/Register';
-// import { AuthProvider } from './contexts/AuthProvider/AuthProvider';
+import AuthProvider from './contexts/AuthProvider/AuthProvider';
 
 function App() {
   return (
     <div className="App">
-  {/* <AuthProvider> */}
+  <AuthProvider>
      <Router>
        <Header></Header>
       <Switch>
@@ -42,6 +43,10 @@ function App() {
          <Explores></Explores>
         </Route>
 
+        <Route  path="/dashboard">
+         <Dashboard></Dashboard>
+        </Route>
+
         <Route path="/login">
          <Login></Login>
         </Route>
@@ -52,7 +57,7 @@ function App() {
       </Switch>
       <Footer></Footer>
      </Router>
-    {/* </AuthProvider> */}
+    </AuthProvider>
     </div>
   );
 }
