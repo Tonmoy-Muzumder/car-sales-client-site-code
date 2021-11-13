@@ -86,11 +86,11 @@ const useFirebase = () => {
         return () => unsubscribed;
     }, [auth])
 
-    useEffect(() => {
-        fetch(`https://stark-caverns-04377.herokuapp.com/users/${user.email}`)
-            .then(res => res.json())
-            .then(data => setAdmin(data.admin))
-    }, [user.email])
+    // useEffect(() => {
+    //     fetch(`https://lit-hamlet-81361.herokuapp.com/products/${user.email}`)
+    //         .then(res => res.json())
+    //         .then(data => setAdmin(data.admin))
+    // }, [user.email])
 
     const logout = () => {
         setIsLoading(true);
@@ -104,7 +104,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('https://stark-caverns-04377.herokuapp.com/users', {
+        fetch('https://lit-hamlet-81361.herokuapp.com/products', {
             method: method,
             headers: {
                 'content-type': 'application/json'
