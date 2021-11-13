@@ -11,7 +11,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [authError, setAuthError] = useState('');
-    const [admin, setAdmin] = useState(false);
+    // const [admin, setAdmin] = useState(false);
     const [token, setToken] = useState('');
 
     const auth = getAuth();
@@ -69,7 +69,7 @@ const useFirebase = () => {
             }).finally(() => setIsLoading(false));
     }
 
-    // observer user state
+    
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -116,7 +116,7 @@ const useFirebase = () => {
 
     return {
         user,
-        admin,
+        // admin,
         token,
         isLoading,
         authError,

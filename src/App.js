@@ -15,6 +15,8 @@ import Explores from './pages/Explore/Explores/Explores';
 import Dashboard from './pages/Dashboard/Dashboard/Dashboard'
 import Register from './pages/Login/Register/Register';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
+import Buying from './Buying/Buying';
+import NotFoundPage from './NotFoundPage/NotFoundPage';
 
 function App() {
   return (
@@ -36,9 +38,14 @@ function App() {
          <Products></Products>
         </Route>
 
+        <Route  path="/buying/:id">
+         <Buying></Buying>
+        </Route>
+
         <Route  path="/reviews">
          <Reviews></Reviews>
         </Route>
+
         <Route  path="/explore">
          <Explores></Explores>
         </Route>
@@ -54,6 +61,11 @@ function App() {
         <Route path="/register">
           <Register></Register>
         </Route>
+
+        <Route path="*">
+         <NotFoundPage></NotFoundPage>
+        </Route>
+
       </Switch>
       <Footer></Footer>
      </Router>

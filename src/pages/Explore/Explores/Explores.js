@@ -17,7 +17,7 @@ const Explores = () => {
     return (
         <div>
             <h2>exploring products</h2>
-            <p>product : {products.length}</p>
+            <p>products : {products.length}</p>
 
         <Container>
             <Row>
