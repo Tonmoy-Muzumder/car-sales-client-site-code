@@ -19,6 +19,12 @@ const AddNewPlan = () => {
     }
     return (
         <div  className="add-product">
+
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <h1>Add New Product</h1>
 
       <form onSubmit={handleSubmit(onSubmit)}>

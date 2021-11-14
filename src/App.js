@@ -12,7 +12,8 @@ import Reviews from './pages/Home/Reviews/Reviews';
 import Login from './pages/Login/Login/Login';
 import Footer from './pages/Shared/Footer/Footer';
 import Explores from './pages/Explore/Explores/Explores';
-import Dashboard from './pages/Dashboard/Dashboard/Dashboard'
+import AddProduct from './pages/Dashboard/AddProduct/AddProduct'
+import MakeAdmin from './pages/Dashboard/MakeAdmin/MakeAdmin';
 import Register from './pages/Login/Register/Register';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import Buying from './Buying/Buying';
@@ -56,8 +57,12 @@ function App() {
          <About></About>
         </Route>
 
-        <Route  path="/dashboard">
-         <Dashboard></Dashboard>
+        <Route path="/addproduct">
+         <AddProduct></AddProduct>
+        </Route> 
+
+        <Route path="/makeadmin">
+         <MakeAdmin></MakeAdmin>
         </Route>
 
         <Route path="/login">

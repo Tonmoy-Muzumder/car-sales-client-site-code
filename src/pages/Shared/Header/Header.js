@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { HashLink } from 'react-router-hash-link';
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 import Box from '@mui/material/Box';
 import { NavLink } from 'react-router-dom';
 import Button from '@mui/material/Button';
@@ -28,10 +28,19 @@ const Header = () => {
       {
         user?.email ?
           <Box>
-            <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/dashboard">
-               <Button color="inherit">Dashboard</Button>
-            </NavLink>
-                <Button style={{ textDecoration: 'none', color: 'white' }} onClick={logout} color="inherit">Logout</Button>
+        <NavDropdown  title="DASHBOARD" id="collasible-nav-dropdown">
+        <NavDropdown.Item as={HashLink} to="/addproduct">Add Product</NavDropdown.Item>
+        <NavDropdown.Item as={HashLink} to="/makeadmin">Make Admin</NavDropdown.Item>
+        <NavDropdown.Item as={HashLink} to="#action/3.3">Something</NavDropdown.Item>
+        <NavDropdown.Divider />
+        {!user.name && <div className="d-flex">
+         <p style={{marginTop: 5}}>USER: <br /> {user.email}</p>
+    
+      </div>
+         }
+        <Button style={{ textDecoration: 'none', color: 'black'  }} onClick={logout} color="inherit">Logout</Button>
+      </NavDropdown>
+               
               </Box>
                :
             <NavLink style={{ textDecoration: 'none', color: 'white' }} to="/login">
