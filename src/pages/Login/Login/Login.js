@@ -11,6 +11,9 @@ const Login = () => {
     const location = useLocation();
     const history = useHistory();
 
+    const login_img = "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+
+
     const handleOnChange = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -28,6 +31,12 @@ const Login = () => {
     }
     return (
         <Container>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <Grid container spacing={2}>
                 <Grid item sx={{ mt: 8 }} xs={12} md={6}>
                     <Typography variant="body1" gutterBottom>Login</Typography>
@@ -65,7 +74,15 @@ const Login = () => {
                     <br />
                     <br />
                 </Grid>
-               
+                <Grid item xs={12} md={6}>
+                    <img style={{ width: '100%' }} src={login_img} alt="" />
+                    <br />
+                <br />
+                <br /><br />
+                <br />
+                <br />
+                </Grid>
+                
             </Grid>
         </Container>
     );

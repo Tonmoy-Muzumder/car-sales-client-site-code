@@ -4,7 +4,6 @@ import { Navbar, Container, Nav } from 'react-bootstrap';
 import Box from '@mui/material/Box';
 import { NavLink } from 'react-router-dom';
 import Button from '@mui/material/Button';
-// import useFirebase from '../../../hooks/useFirebase';
 import useAuth from '../../../hooks/useAuth';
 
 
@@ -24,6 +23,7 @@ const Header = () => {
       <Nav.Link as={HashLink} to="/home#products">PRODUCTS+</Nav.Link>
       <Nav.Link as={HashLink} to="/home#reviews">REVIEWS+</Nav.Link>
       <Nav.Link as={HashLink} to="/explore">EXPLORE+</Nav.Link>
+      <Nav.Link as={HashLink} to="/about">ABOUT+</Nav.Link>
 
       {
         user?.email ?

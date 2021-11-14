@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Row, Container } from 'react-bootstrap';
 import Explore from './Explore';
+import useAuth from '../../../hooks/useAuth';
+import Spinner from 'react-bootstrap/Spinner'
+
 
 const Explores = () => {
     const [products, setProducts] = useState([]);
+    const {isLoading} = useAuth();
 
     useEffect(() => {
         const url = "https://lit-hamlet-81361.herokuapp.com/products";
@@ -14,6 +18,10 @@ const Explores = () => {
             setProducts(data);
         })
     }, []);
+
+    if (isLoading) {
+        return <Spinner animation="border" variant="success" />
+    };
     return (
         <div>
              <br />

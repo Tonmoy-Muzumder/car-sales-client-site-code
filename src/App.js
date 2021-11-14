@@ -16,6 +16,7 @@ import Dashboard from './pages/Dashboard/Dashboard/Dashboard'
 import Register from './pages/Login/Register/Register';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import Buying from './Buying/Buying';
+import About from './pages/About/About';
 import NotFoundPage from './NotFoundPage/NotFoundPage';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 
@@ -49,6 +50,10 @@ function App() {
 
         <Route  path="/explore">
          <Explores></Explores>
+        </Route>
+
+        <Route  path="/about">
+         <About></About>
         </Route>
 
         <Route  path="/dashboard">

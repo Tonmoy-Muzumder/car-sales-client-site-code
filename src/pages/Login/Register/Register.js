@@ -12,6 +12,9 @@ const Register = () => {
     const history = useHistory();
     const { user, registerUser, isLoading, authError } = useAuth();
 
+
+    const login_img = "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+    
     const handleOnBlur = e => {
         const field = e.target.name;
         const value = e.target.value;
@@ -29,6 +32,12 @@ const Register = () => {
     }
     return (
         <Container>
+             <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <Grid container spacing={2}>
                 <Grid item sx={{ mt: 8 }} xs={12} lg={6}>
                     <Typography variant="body1" gutterBottom>Register</Typography>
@@ -76,7 +85,15 @@ const Register = () => {
                     {user?.email && <Alert severity="success">User Created successfully!</Alert>}
                     {authError && <Alert severity="error">{authError}</Alert>}
                 </Grid>
-               
+                <Grid item xs={12} md={6}>
+                    <img style={{ width: '100%' }} src={login_img} alt="" />
+                    <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                </Grid>
+                
             </Grid>
         </Container>
     );
