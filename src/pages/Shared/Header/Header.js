@@ -14,7 +14,7 @@ const Header = () => {
 
     return (
 
-      <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
+      <Navbar fixed="top" collapseOnSelect expand="lg" bg="primary" variant="dark">
   <Container>
   <Navbar.Brand as={HashLink} to="/home#home" style={{fontSize: 40}}>Car<span style={{color: 'red'}}>X</span> </Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />

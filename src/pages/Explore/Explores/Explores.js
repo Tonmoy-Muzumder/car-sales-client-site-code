@@ -16,7 +16,13 @@ const Explores = () => {
     }, []);
     return (
         <div>
-            <h2>exploring products</h2>
+             <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <h1 className="text-danger">Buy Your Dream Car</h1>
+            <p>Choose the best car and start your <br /> journey.</p>
             <p>products : {products.length}</p>
 
         <Container>
