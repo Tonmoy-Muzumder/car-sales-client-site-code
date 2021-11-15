@@ -5,7 +5,7 @@ const Product = ({product}) => {
     const {_id, img, name, description, price, time} = product;
     return (
         <div className='col-lg-4 col-md-6 col-sm-6 col-12'>
-            <div style={{backgroundColor: 'lightBlue'}} className="my-5 rounded">
+            <div  className="my-5 rounded">
            <img className="img-fluid mt-3 rounded w-100" src={img} alt="" />
             <div className="text-start m-4 ">
             <h1 style={{color: 'coral', marginBottom: 15}}>{name}</h1>
@@ -19,8 +19,11 @@ const Product = ({product}) => {
             <Link to={`/buying/${_id}`}>
                 <button className="btn btn-primary my-5">BUY NOW</button>
             </Link>
-            </div>           
+            </div> 
+            <hr />          
            </div> 
+
+          
         </div>
     );
 };
