@@ -24,7 +24,7 @@ const Explores = () => {
     };
     return (
         <div>
-             <br />
+            <br />
             <br />
             <br />
             <br />

@@ -1,4 +1,6 @@
 import React from 'react';
+import Rating from '@mui/material/Rating';
+import StarIcon from '@mui/icons-material/Star';
 
 const Review = ({review}) => {
     const {img, name, description, rating, position} = review;
@@ -14,7 +16,14 @@ const Review = ({review}) => {
                     <h1>{name}</h1>
                     <p>{position}</p>
                     </div>
-                    <p>{rating}</p>
+                    <Rating
+        name="text-feedback"
+        value={rating}
+        readOnly
+        precision={0.5}
+        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+      />
+
                 </div>
             </div>
             <br />

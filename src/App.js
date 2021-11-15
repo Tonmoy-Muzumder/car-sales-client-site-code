@@ -17,9 +17,10 @@ import MakeAdmin from './pages/Dashboard/MakeAdmin/MakeAdmin';
 import Register from './pages/Login/Register/Register';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import Buying from './Buying/Buying';
+import Pay from './pages/Dashboard/Pay/Pay';
 import About from './pages/About/About';
 import AddReviews from './pages/Dashboard/AddReviews/AddReviews';
-import NotFoundPage from './NotFoundPage/NotFoundPage';
+import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 
 function App() {
@@ -52,6 +53,10 @@ function App() {
 
         <Route  path="/addreviews">
          <AddReviews></AddReviews>
+        </Route>
+
+        <Route  path="/pay">
+         <Pay></Pay>
         </Route>
 
         <Route  path="/explore">

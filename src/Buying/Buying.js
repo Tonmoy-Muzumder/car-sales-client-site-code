@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 const Buying = () => {
@@ -18,9 +18,14 @@ const Buying = () => {
               console.log(error);
             }
           )
-    },[]);
+    }, []);
     return (
         <div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
         <h2>Buy your Dream Car</h2>
         <Container>
             <Row>
@@ -35,10 +40,10 @@ const Buying = () => {
                 <p>{product.price}</p>
                 <p>{product.time}</p>
             </div>
-{/*             
-            <Link to={`/buying/${_id}`}>
-                <button className="btn btn-warning my-5">BUY NOW</button>
-            </Link> */}
+            
+            <Link to="">
+                <button className="btn btn-primary my-5">BUY NOW</button>
+            </Link>
             </div> 
                 </Col>
             </Row>

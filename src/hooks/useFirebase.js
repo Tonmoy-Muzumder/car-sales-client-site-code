@@ -11,7 +11,6 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [authError, setAuthError] = useState('');
-    // const [admin, setAdmin] = useState(false);
     const [token, setToken] = useState('');
 
     const auth = getAuth();
@@ -85,12 +84,6 @@ const useFirebase = () => {
         });
         return () => unsubscribed;
     }, [auth])
-
-    // useEffect(() => {
-    //     fetch(`https://lit-hamlet-81361.herokuapp.com/products/${user.email}`)
-    //         .then(res => res.json())
-    //         .then(data => setAdmin(data.admin))
-    // }, [user.email])
 
     const logout = () => {
         setIsLoading(true);

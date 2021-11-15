@@ -32,6 +32,7 @@ const Header = () => {
         <NavDropdown.Item as={HashLink} to="/addproduct">Add Product</NavDropdown.Item>
         <NavDropdown.Item as={HashLink} to="/makeadmin">Make Admin</NavDropdown.Item>
         <NavDropdown.Item as={HashLink} to="/addreviews">Add Reviews</NavDropdown.Item>
+        <NavDropdown.Item as={HashLink} to="/pay">Pay Money</NavDropdown.Item>
         <NavDropdown.Divider />
         {!user.name && <div className="d-flex">
          <p style={{marginTop: 5}}>USER: <br /> {user.email}</p>
