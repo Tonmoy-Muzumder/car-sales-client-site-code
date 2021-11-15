@@ -18,6 +18,7 @@ import Register from './pages/Login/Register/Register';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import Buying from './Buying/Buying';
 import About from './pages/About/About';
+import AddReviews from './pages/Dashboard/AddReviews/AddReviews';
 import NotFoundPage from './NotFoundPage/NotFoundPage';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 
@@ -47,6 +48,10 @@ function App() {
 
         <Route  path="/reviews">
          <Reviews></Reviews>
+        </Route>
+
+        <Route  path="/addreviews">
+         <AddReviews></AddReviews>
         </Route>
 
         <Route  path="/explore">

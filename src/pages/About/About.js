@@ -3,7 +3,7 @@ import React from 'react';
 const About = () => {
     const aboutImg = "https://unicoderbd.com/theme/html/chaka/assets/images/thumb/height1.jpg";
     return (
-        <div>
+        <div id="about">
             <br />
             <br />
             <br />

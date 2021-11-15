@@ -97,14 +97,14 @@ const useFirebase = () => {
         signOut(auth).then(() => {
             // Sign-out successful.
         }).catch((error) => {
-            // An error happened.
+           console.log(error)
         })
             .finally(() => setIsLoading(false));
     }
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('https://lit-hamlet-81361.herokuapp.com/products', {
+        fetch('http://localhost:5000/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

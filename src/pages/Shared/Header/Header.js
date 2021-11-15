@@ -23,7 +23,7 @@ const Header = () => {
       <Nav.Link as={HashLink} to="/home#products">PRODUCTS+</Nav.Link>
       <Nav.Link as={HashLink} to="/home#reviews">REVIEWS+</Nav.Link>
       <Nav.Link as={HashLink} to="/explore">EXPLORE+</Nav.Link>
-      <Nav.Link as={HashLink} to="/about">ABOUT+</Nav.Link>
+      <Nav.Link as={HashLink} to="/home#about">ABOUT+</Nav.Link>
 
       {
         user?.email ?
@@ -31,7 +31,7 @@ const Header = () => {
         <NavDropdown  title="DASHBOARD" id="collasible-nav-dropdown">
         <NavDropdown.Item as={HashLink} to="/addproduct">Add Product</NavDropdown.Item>
         <NavDropdown.Item as={HashLink} to="/makeadmin">Make Admin</NavDropdown.Item>
-        <NavDropdown.Item as={HashLink} to="#action/3.3">Something</NavDropdown.Item>
+        <NavDropdown.Item as={HashLink} to="/addreviews">Add Reviews</NavDropdown.Item>
         <NavDropdown.Divider />
         {!user.name && <div className="d-flex">
          <p style={{marginTop: 5}}>USER: <br /> {user.email}</p>

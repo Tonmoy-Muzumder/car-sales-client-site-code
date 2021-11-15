@@ -1,0 +1,10 @@
+.add-review form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    margin-left: 30%;
+}
+.add-review input {
+    margin-bottom: 5px;
+}
